@@ -1,0 +1,26 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>edit the clothes</title>
+  </head>
+  <body>
+    <h1>Edit <%= cloth.name %></h1>
+    <form action="/clothes/<%=cloth._id%>?_method=PUT" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" value="<%= cloth.name %>" required  />
+    
+        <label for="description">description of the clothes</label>
+        <input type="text" name="description" id="description" value="<%= cloth.description %>"  required/>
+
+        <label for="image">an image of the clothes</label>
+        <input type="text" name="image" id="image" value="<%= cloth.image %>" />
+    
+    
+        <button type="submit">Update clothes</button>
+      </form>
+      <a href="/clothes">Back to clothes</a>
+  </body>
+</html>

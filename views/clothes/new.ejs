@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create a clothing</title>
+  </head>
+  <body>
+    <h1>Create a New clothe item!</h1>
+    <form action="/clothes" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required />
+    
+        <label for="description">description of the clothes</label>
+        <input type="text" name="description" id="description"  required/>
+
+        <label for="image">an image of the clothes</label>
+        <input type="text" name="image" id="image" />
+    
+    
+        <button type="submit">Add New clothing item</button>
+      </form>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title><%= cloth.name %></title>
+  </head>
+  <body>
+    <h1><%= cloth.name %></h1>
+
+    <p>Description:<%= cloth.description %></p>
+    
+    <% if (cloth.image) { %>
+        <p>Image URL: <%= cloth.image %></p>
+    <% } else { %>
+        <p>No image available for this clothing item.</p>
+    <% } %>
+    <form action="/clothes/<%= cloth._id %>?_method=DELETE" method="POST">
+      <button type="submit">Delete <%= cloth.name %></button>
+    </form>
+    <a href="/clothes">Back to clothes</a>
+    <a href="/clothes/<%= cloth._id %>/edit">Edit <%= cloth.name %></a>
+  </body>
+</html>

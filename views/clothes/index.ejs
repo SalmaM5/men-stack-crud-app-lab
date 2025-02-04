@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Clothes Index</title>
+  </head>
+  <body>
+    <a href="/clothes/new">Add New Clothes Item</a>
+    <h1>All clothes </h1>
+    <ul>
+        <% clothes.forEach(cloth => { %>
+          <li>
+            <%= cloth.name %>
+          </li>
+        <% }); %>
+      </ul>
+
+  </body>
+</html>
