@@ -46,15 +46,16 @@ app.get("/", async (req, res) => {
     //     console.log('ERROR:', err); 
     // }
     
-    res.redirect("/clothes/new");
+    res.redirect("/clothes");
     console.log(req.body);
   });
 
-//   // Fruit Show
+
 app.get('/clothes/:clothId', async (req, res) => {
     const foundCloth = await Clothe.findById(req.params.clothId);
     res.render('clothes/show.ejs', { cloth: foundCloth });
   });
+
 
 
   app.get("/clothes/:clothId/edit", async (req, res) => {
@@ -68,11 +69,10 @@ app.get('/clothes/:clothId', async (req, res) => {
 app.put("/clothes/:clothId", async (req, res) => {
   
  
-  
-  // Update the fruit in the database
+
   await Clothe.findByIdAndUpdate(req.params.clothId, req.body);
 
-  // Redirect to the fruit's show page to see the updates
+
   res.redirect(`/clothes/${req.params.clothId}`);
 });
 

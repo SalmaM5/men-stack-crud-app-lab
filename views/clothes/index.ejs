@@ -11,7 +11,7 @@
     <ul>
         <% clothes.forEach(cloth => { %>
           <li>
-            <%= cloth.name %>
+            <a href="/clothes/<%= cloth._id %>"><%= cloth.name %></a>
           </li>
         <% }); %>
       </ul>
